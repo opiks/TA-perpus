@@ -13,12 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Student Wallet
+Route::get('/', [App\Http\Controllers\BooksController::class, 'index'])->name('books.index');
+Route::get('/kategori', [App\Http\Controllers\BooksController::class, 'category'])->name('books.category');
+Route::get('/cari-buku', [App\Http\Controllers\BooksController::class, 'search'])->name('books.search');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
