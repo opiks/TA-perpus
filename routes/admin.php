@@ -11,3 +11,10 @@ Route::post('kategori-buku/store', [App\Http\Controllers\Admin\CategoryControlle
 Route::get('kategori-buku/edit/{Category}', [App\Http\Controllers\Admin\CategoryController::class, 'edit'])->name('kategori.edit');
 Route::put('kategori-buku/update/{Category}', [App\Http\Controllers\Admin\CategoryController::class, 'update'])->name('kategori.update');
 Route::get('kategori-buku/destroy/{Category}', [App\Http\Controllers\Admin\CategoryController::class, 'destroy'])->name('kategori.destroy');
+
+Route::get('lokasi-buku', [App\Http\Controllers\Admin\LocationController::class, 'index'])->name('lokasi.index');
+Route::get('lokasi-buku/add', [App\Http\Controllers\Admin\LocationController::class, 'add'])->name('lokasi.add');
+Route::post('lokasi-buku/store', [App\Http\Controllers\Admin\LocationController::class, 'store'])->name('lokasi.store');
+Route::get('lokasi-buku/edit/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'edit'])->name('lokasi.edit');
+Route::put('lokasi-buku/update/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'update'])->name('lokasi.update');
+Route::get('lokasi-buku/destroy/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'destroy'])->name('lokasi.destroy');

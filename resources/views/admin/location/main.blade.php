@@ -1,19 +1,19 @@
 @extends('layouts.adminlayout')
 
 @section('title')
-    Perpustakaan Admin | Kategori Buku
+    Perpustakaan Admin | Lokasi Buku
 @endsection
 
 @section('content')
     <h1 class="page-header mb-3">
-        Data Kategori Buku
+        Data Lokasi Buku
     </h1>
     <div class="row">
         <div class="col-xl-12">
             <div class="card">
                 <div class="card-header">
-                    <a href="{{ route('admin.kategori.add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah
-                        Kategori Buku</a>
+                    <a href="{{ route('admin.lokasi.add') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Tambah
+                        Lokasi Buku</a>
                 </div>
                 <div class="card-body">
                     @if (session()->has('alert'))
@@ -24,22 +24,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">#</th>
-                                    <th scope="col">Nama Kategori Buku</th>
+                                    <th scope="col">Lokasi Buku</th>
                                     <th scope="col">Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($Categories as $Category)
+                                @foreach ($Locations as $Location)
                                     <tr>
                                         <th scope="row">{{ number_format($no++) }}</th>
-                                        <td>{{ $Category->name }}</td>
+                                        <td>{{ $Location->name }}</td>
                                         <td>
-                                            <a href="{{ route('admin.kategori.edit', $Category) }}"
+                                            <a href="{{ route('admin.lokasi.edit', $Location) }}"
                                                 class="btn btn-sm btn-primary">
                                                 <i class="fa fa-edit"></i> Edit
                                             </a>
                                             <button class="btn btn-sm btn-danger btndelete"
-                                                data-delete="{{ route('admin.kategori.destroy', $Category) }}">
+                                                data-delete="{{ route('admin.lokasi.destroy', $Location) }}">
                                                 <i class="fa fa-trash"></i>
                                                 Hapus
                                             </button>

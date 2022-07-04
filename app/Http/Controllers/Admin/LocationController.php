@@ -4,20 +4,20 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Category;
+use App\Models\Location;
 
-class CategoryController extends Controller
+class LocationController extends Controller
 {
     public function index(Request $request)
     {
-        $Categories = Category::paginate(20);
+        $Locations = Location::paginate(20);
         $no = 1;
-        return view('admin.category.main', compact('Categories', 'no'));
+        return view('admin.location.main', compact('Locations', 'no'));
     }
 
     public function add()
     {
-        return view('admin.category.add');
+        return view('admin.location.add');
     }
 
     public function store(Request $request)
@@ -28,22 +28,22 @@ class CategoryController extends Controller
             'required' => 'Field :attribute tidak boleh kosong',
         ]);
 
-        $Category = new Category();
-        $Category->name = $request->name;
-        $Category->save();
+        $Location = new Location();
+        $Location->name = $request->name;
+        $Location->save();
 
-        return redirect()->route('admin.kategori.index')->with([
+        return redirect()->route('admin.lokasi.index')->with([
             'alert' => 'success',
             'msg' => 'Data berhasil ditambahkan'
         ]);
     }
 
-    public function edit(Category $Category)
+    public function edit(Location $Location)
     {
-        return view('admin.category.edit', compact('Category'));
+        return view('admin.location.edit', compact('Location'));
     }
 
-    public function update(Category $Category, Request $request)
+    public function update(Location $Location, Request $request)
     {
         $request->validate([
             'name' => 'required',
@@ -51,20 +51,20 @@ class CategoryController extends Controller
             'required' => 'Field :attribute tidak boleh kosong',
         ]);
 
-        $Category->name = $request->name;
-        $Category->save();
+        $Location->name = $request->name;
+        $Location->save();
 
-        return redirect()->route('admin.kategori.index')->with([
+        return redirect()->route('admin.lokasi.index')->with([
             'alert' => 'success',
             'msg' => 'Data berhasil diubah'
         ]);
     }
 
-    public function destroy(Category $Category)
+    public function destroy(Location $Location)
     {
-        $Category->delete();
+        $Location->delete();
 
-        return redirect()->route('admin.kategori.index')->with([
+        return redirect()->route('admin.lokasi.index')->with([
             'alert' => 'success',
             'msg' => 'Data berhasil dihapus'
         ]);

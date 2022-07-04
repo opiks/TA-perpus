@@ -90,7 +90,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="analytics.html" class="menu-link">
+                        <a href="{{ route('admin.lokasi.index') }}" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
                             <span class="menu-text">Lokasi Buku</span>
                         </a>
@@ -144,6 +144,7 @@
     <!-- ================== BEGIN page-js ================== -->
     <script src="{{ asset('assets/adminpage/plugins/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/adminpage/js/demo/dashboard.demo.js') }}"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- ================== END page-js ================== -->
     <script>
         (function(i, s, o, g, r, a, m) {
