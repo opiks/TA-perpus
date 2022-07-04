@@ -84,7 +84,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="analytics.html" class="menu-link">
+                        <a href="{{ route('admin.kategori.index') }}" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
                             <span class="menu-text">Kategori Buku</span>
                         </a>
