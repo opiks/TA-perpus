@@ -49,6 +49,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <div style="display: flex;justify-content: center;">
+                        {{ $Locations->links() }}
+                    </div>
                 </div>
             </div>
         </div>

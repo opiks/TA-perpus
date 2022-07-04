@@ -49,6 +49,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <div style="display: flex;justify-content: center;">
+                        {{ $Categories->links() }}
+                    </div>
                 </div>
             </div>
         </div>
