@@ -18,3 +18,10 @@ Route::post('lokasi-buku/store', [App\Http\Controllers\Admin\LocationController:
 Route::get('lokasi-buku/edit/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'edit'])->name('lokasi.edit');
 Route::put('lokasi-buku/update/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'update'])->name('lokasi.update');
 Route::get('lokasi-buku/destroy/{Location}', [App\Http\Controllers\Admin\LocationController::class, 'destroy'])->name('lokasi.destroy');
+
+Route::get('member', [App\Http\Controllers\Admin\MemberController::class, 'index'])->name('member.index');
+Route::get('member/add', [App\Http\Controllers\Admin\MemberController::class, 'add'])->name('member.add');
+Route::post('member/store', [App\Http\Controllers\Admin\MemberController::class, 'store'])->name('member.store');
+Route::get('member/edit/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'edit'])->name('member.edit');
+Route::put('member/update/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'update'])->name('member.update');
+Route::get('member/destroy/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'destroy'])->name('member.destroy');
