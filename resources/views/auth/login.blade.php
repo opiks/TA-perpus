@@ -1,8 +1,22 @@
+<!-- 
+=============================================
+   Nama : Muhamad Taufik Zamaludin
+   NIM : 1120031026
+
+   Nama : Muhamad Zulfiqor
+   NIM : 1120031025
+
+   Deskripsi Program : App Perpustakaan 
+============================================= 
+-->
+
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
             <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
+                <!-- <x-application-logo class="w-20 h-20 fill-current text-gray-500" /> -->
+                <img src="{{ asset('assets/adminpage/img/book-logo.png') }}" alt=""
+                style="width: 150px; height: 150px;" />
             </a>
         </x-slot>
 
@@ -40,16 +54,22 @@
                 </label>
             </div>
 
-            <div class="flex items-center justify-end mt-4">
+            <div class="flex flex-col justify-center items-center">
+             <div>
+             <x-button class="mt-3">
+                    {{ __('Log in') }}
+                </x-button>
+             </div>
+
+            <div class="mt-3">
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
+             </div>
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+             
             </div>
         </form>
     </x-auth-card>

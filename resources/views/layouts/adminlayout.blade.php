@@ -1,3 +1,15 @@
+<!-- 
+=============================================
+   Nama : Muhamad Taufik Zamaludin
+   NIM : 1120031026
+
+   Nama : Muhamad Zulfiqor
+   NIM : 1120031025
+
+   Deskripsi Program : App Perpustakaan 
+============================================= 
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -76,7 +88,7 @@
             <div class="app-sidebar-content" data-scrollbar="true" data-height="100%">
                 <!-- BEGIN menu -->
                 <div class="menu">
-                    <div class="menu-header">Navigation</div>
+                    <div class="menu-header">Menu</div>
                     <div class="menu-item active">
                         <a href="index-2.html" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-laptop"></i></span>
@@ -85,31 +97,31 @@
                     </div>
                     <div class="menu-item">
                         <a href="{{ route('admin.kategori.index') }}" class="menu-link">
-                            <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+                            <span class="menu-icon"><i class="fa fa-bookmark"></i></span>
                             <span class="menu-text">Kategori Buku</span>
                         </a>
                     </div>
                     <div class="menu-item">
                         <a href="{{ route('admin.lokasi.index') }}" class="menu-link">
-                            <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+                            <span class="menu-icon"><i class="fa fa-location-arrow"></i></span>
                             <span class="menu-text">Lokasi Buku</span>
                         </a>
                     </div>
                     <div class="menu-item">
                         <a href="analytics.html" class="menu-link">
-                            <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+                            <span class="menu-icon"><i class="fa fa-book"></i></span>
                             <span class="menu-text">Buku</span>
                         </a>
                     </div>
                     <div class="menu-item">
                         <a href="analytics.html" class="menu-link">
-                            <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+                            <span class="menu-icon"><i class="fa fa-tasks"></i></span>
                             <span class="menu-text">Peminjaman</span>
                         </a>
                     </div>
                     <div class="menu-item">
                         <a href="{{ route('admin.member.index') }}" class="menu-link">
-                            <span class="menu-icon"><i class="fa fa-chart-pie"></i></span>
+                            <span class="menu-icon"><i class="fa fa-user-circle"></i></span>
                             <span class="menu-text">Member</span>
                         </a>
                     </div>

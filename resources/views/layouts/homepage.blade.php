@@ -1,3 +1,15 @@
+<!-- 
+=============================================
+   Nama : Muhamad Taufik Zamaludin
+   NIM : 1120031026
+
+   Nama : Muhamad Zulfiqor
+   NIM : 1120031025
+
+   Deskripsi Program : App Perpustakaan 
+============================================= 
+-->
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -7,7 +19,7 @@
     <meta name="keywords" content="Anime, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Perpus Gimang | @yield('title')</title>
+    <title>App Perpustakaan | @yield('title')</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -38,7 +50,7 @@
                 <div class="col-lg-2">
                     <div class="header__logo">
                         <a href="./index.html" style="color: white;">
-                            Perpus Gimang
+                            App Perpustakaan
                         </a>
                     </div>
                 </div>

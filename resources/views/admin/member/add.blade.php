@@ -20,7 +20,7 @@
                         @csrf
                         <div class="form-row row">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">NIK</label>
+                                <label for="inputEmail4" class="mb-2">NIK</label>
                                 <input type="text" class="form-control" name="nik" placeholder="Masukin NIK" required
                                     value="{{ old('nik') }}">
                                 @error('nik')
@@ -28,7 +28,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Nama</label>
+                                <label for="inputPassword4" class="mb-2">Nama</label>
                                 <input type="text" class="form-control" name="name" placeholder="Masukin Nama"
                                     required value="{{ old('name') }}">
                                 @error('name')
@@ -38,7 +38,7 @@
                         </div>
                         <div class="form-row row mt-2">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">E-mail</label>
+                                <label for="inputEmail4" class="mb-2">E-mail</label>
                                 <input type="email" class="form-control" name="email" placeholder="Masukin Email"
                                     required value="{{ old('email') }}">
                                 @error('email')
@@ -46,7 +46,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">No Telepon</label>
+                                <label for="inputPassword4" class="mb-2">No Telepon</label>
                                 <input type="text" class="form-control" name="nomor_telepon" placeholder="Masukin Nama"
                                     required value="{{ old('nomor_telepon') }}">
                                 @error('nomor_telepon')
@@ -56,7 +56,7 @@
                         </div>
                         <div class="form-row row mt-2">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Tempat Lahir</label>
+                                <label for="inputEmail4" class="mb-2">Tempat Lahir</label>
                                 <input type="text" class="form-control" name="tempat_lahir"
                                     placeholder="Masukin Tempat Lahir" required value="{{ old('tempat_lahir') }}">
                                 @error('tempat_lahir')
@@ -64,7 +64,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Tanggal Lahir</label>
+                                <label for="inputPassword4" class="mb-2">Tanggal Lahir</label>
                                 <input type="date" class="form-control" name="tanggal_lahir"
                                     placeholder="Masukin Tanggal Lahir" required value="{{ old('tanggal_lahir') }}">
                                 @error('tanggal_lahir')
@@ -74,7 +74,7 @@
                         </div>
                         <div class="form-row row mt-2">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Gol Darah</label>
+                                <label for="inputEmail4" class="mb-2">Gol Darah</label>
                                 <input type="text" class="form-control" name="gol_darah" placeholder="Masukin Gol Darah"
                                     required value="{{ old('gol_darah') }}">
                                 @error('gol_darah')
@@ -82,7 +82,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputPassword4">Jenis Kelamin</label>
+                                <label for="inputPassword4" class="mb-2">Jenis Kelamin</label>
                                 <select class="form-control" name="jenis_kelamin">
                                     <option>Pilih Jenis Kelamin</option>
                                     <option value="Laki - Laki" @if (old('jenis_kelamin') == 'Laki - Laki') selected @endif>Laki -
@@ -98,7 +98,7 @@
                         </div>
                         <div class="form-row row mt-2">
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Agama</label>
+                                <label for="inputEmail4" class="mb-2">Agama</label>
                                 <input type="text" class="form-control" name="agama" placeholder="Masukin Gol Darah"
                                     required value="{{ old('agama') }}">
                                 @error('agama')
@@ -106,7 +106,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="inputEmail4">Foto Member</label>
+                                <label for="inputEmail4" class="mb-2">Foto Member</label>
                                 <input type="file" class="form-control" name="member_photo_name"
                                     placeholder="Masukin Gol Darah" required>
                                 @error('member_photo_name')
@@ -114,8 +114,8 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="exampleFormControlTextarea1">Alamat</label>
+                        <div class="form-group mt-2">
+                            <label for="exampleFormControlTextarea1" class="mb-2">Alamat</label>
                             <textarea class="form-control" name="address" rows="3"></textarea>
                         </div>
                         <hr>

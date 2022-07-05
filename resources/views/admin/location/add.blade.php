@@ -19,7 +19,7 @@
                         @method('POST')
                         @csrf
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Lokasi Buku</label>
+                            <label for="exampleFormControlInput1" class="mb-2">Lokasi Buku</label>
                             <input type="text" class="form-control" name="name" value="{{ old('name') }}"
                                 placeholder="Masukan Lokasi Buku">
                             @error('name')

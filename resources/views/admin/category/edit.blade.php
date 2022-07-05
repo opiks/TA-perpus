@@ -19,7 +19,7 @@
                         @method('PUT')
                         @csrf
                         <div class="form-group">
-                            <label for="exampleFormControlInput1">Nama Kategori Buku</label>
+                            <label for="exampleFormControlInput1" class="mb-2">Nama Kategori Buku</label>
                             <input type="text" class="form-control" name="name" value="{{ $Category->name }}"
                                 placeholder="Masukan Nama Kategori Buku">
                             @error('name')
