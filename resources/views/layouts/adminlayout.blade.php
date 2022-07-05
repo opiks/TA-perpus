@@ -1,4 +1,4 @@
-<!-- 
+<!--
 =============================================
    Nama : Muhamad Taufik Zamaludin
    NIM : 1120031026
@@ -6,8 +6,8 @@
    Nama : Muhamad Zulfiqor
    NIM : 1120031025
 
-   Deskripsi Program : App Perpustakaan 
-============================================= 
+   Deskripsi Program : App Perpustakaan
+=============================================
 -->
 
 <!DOCTYPE html>
@@ -105,6 +105,12 @@
                         <a href="{{ route('admin.lokasi.index') }}" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-location-arrow"></i></span>
                             <span class="menu-text">Lokasi Buku</span>
+                        </a>
+                    </div>
+                    <div class="menu-item">
+                        <a href="{{ route('admin.tipe.index') }}" class="menu-link">
+                            <span class="menu-icon"><i class="fa fa-tags"></i></span>
+                            <span class="menu-text">Tipe Buku</span>
                         </a>
                     </div>
                     <div class="menu-item">

@@ -25,3 +25,10 @@ Route::post('member/store', [App\Http\Controllers\Admin\MemberController::class,
 Route::get('member/edit/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'edit'])->name('member.edit');
 Route::put('member/update/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'update'])->name('member.update');
 Route::get('member/destroy/{Member}', [App\Http\Controllers\Admin\MemberController::class, 'destroy'])->name('member.destroy');
+
+Route::get('Tipe-buku', [App\Http\Controllers\Admin\TypeController::class, 'index'])->name('tipe.index');
+Route::get('Tipe-buku/add', [App\Http\Controllers\Admin\TypeController::class, 'add'])->name('tipe.add');
+Route::post('Tipe-buku/store', [App\Http\Controllers\Admin\TypeController::class, 'store'])->name('tipe.store');
+Route::get('Tipe-buku/edit/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'edit'])->name('tipe.edit');
+Route::put('Tipe-buku/update/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'update'])->name('tipe.update');
+Route::get('Tipe-buku/destroy/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'destroy'])->name('tipe.destroy');
