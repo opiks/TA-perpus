@@ -25,6 +25,7 @@
     <!-- ================== BEGIN core-css ================== -->
     <link href="{{ asset('assets/adminpage/css/vendor.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/adminpage/css/app.min.css') }}" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <!-- ================== END core-css ================== -->
 
 </head>
@@ -114,7 +115,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="analytics.html" class="menu-link">
+                        <a href="{{ route('admin.buku.index') }}" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-book"></i></span>
                             <span class="menu-text">Buku</span>
                         </a>
@@ -163,6 +164,8 @@
     <script src="{{ asset('assets/adminpage/plugins/apexcharts/dist/apexcharts.min.js') }}"></script>
     <script src="{{ asset('assets/adminpage/js/demo/dashboard.demo.js') }}"></script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.ckeditor.com/4.19.0/basic/ckeditor.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <!-- ================== END page-js ================== -->
     <script>
         (function(i, s, o, g, r, a, m) {

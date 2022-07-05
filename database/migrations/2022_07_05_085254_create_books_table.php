@@ -25,6 +25,8 @@ return new class extends Migration
             $table->longText('penulis')->nullable();
             $table->longText('book_photo')->nullable();
             $table->longText('book_photo_path')->nullable();
+            $table->integer('book_total')->nullable();
+            $table->integer('book_total_sisa')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

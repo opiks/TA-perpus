@@ -32,3 +32,10 @@ Route::post('Tipe-buku/store', [App\Http\Controllers\Admin\TypeController::class
 Route::get('Tipe-buku/edit/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'edit'])->name('tipe.edit');
 Route::put('Tipe-buku/update/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'update'])->name('tipe.update');
 Route::get('Tipe-buku/destroy/{Type}', [App\Http\Controllers\Admin\TypeController::class, 'destroy'])->name('tipe.destroy');
+
+Route::get('buku', [App\Http\Controllers\Admin\BookController::class, 'index'])->name('buku.index');
+Route::get('buku/add', [App\Http\Controllers\Admin\BookController::class, 'add'])->name('buku.add');
+Route::post('buku/store', [App\Http\Controllers\Admin\BookController::class, 'store'])->name('buku.store');
+Route::get('buku/edit/{Book}', [App\Http\Controllers\Admin\BookController::class, 'edit'])->name('buku.edit');
+Route::put('buku/update/{Book}', [App\Http\Controllers\Admin\BookController::class, 'update'])->name('buku.update');
+Route::get('buku/destroy/{Book}', [App\Http\Controllers\Admin\BookController::class, 'destroy'])->name('buku.destroy');
