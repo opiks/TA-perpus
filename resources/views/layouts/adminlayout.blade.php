@@ -121,7 +121,7 @@
                         </a>
                     </div>
                     <div class="menu-item">
-                        <a href="analytics.html" class="menu-link">
+                        <a href="{{ route('admin.peminjaman.index') }}" class="menu-link">
                             <span class="menu-icon"><i class="fa fa-tasks"></i></span>
                             <span class="menu-text">Peminjaman</span>
                         </a>

@@ -39,3 +39,8 @@ Route::post('buku/store', [App\Http\Controllers\Admin\BookController::class, 'st
 Route::get('buku/edit/{Book}', [App\Http\Controllers\Admin\BookController::class, 'edit'])->name('buku.edit');
 Route::put('buku/update/{Book}', [App\Http\Controllers\Admin\BookController::class, 'update'])->name('buku.update');
 Route::get('buku/destroy/{Book}', [App\Http\Controllers\Admin\BookController::class, 'destroy'])->name('buku.destroy');
+
+Route::get('peminjaman', [App\Http\Controllers\Admin\BorrowerController::class, 'index'])->name('peminjaman.index');
+Route::get('peminjaman/add', [App\Http\Controllers\Admin\BorrowerController::class, 'add'])->name('peminjaman.add');
+Route::post('peminjaman/store', [App\Http\Controllers\Admin\BorrowerController::class, 'store'])->name('peminjaman.store');
+Route::get('peminjaman/pengembalian/{Borrower}', [App\Http\Controllers\Admin\BorrowerController::class, 'pengembalian'])->name('peminjaman.pengembalian');
