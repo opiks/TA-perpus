@@ -18,4 +18,14 @@ class Book extends Model
     {
         return $this->hasMany(BookCategory::class);
     }
+
+    public function location()
+    {
+        return $this->belongsTo(Location::class);
+    }
+
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }

@@ -15,7 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 // Student Wallet
 Route::get('/', [App\Http\Controllers\BooksController::class, 'index'])->name('books.index');
+Route::get('buku/detail/{Book}', [App\Http\Controllers\BooksController::class, 'detail'])->name('books.detail');
+
 Route::get('/kategori', [App\Http\Controllers\BooksController::class, 'category'])->name('books.category');
+Route::get('/kategori/detail/{Category}', [App\Http\Controllers\BooksController::class, 'categoryDetail'])->name('books.categoryDetail');
+
 Route::get('/cari-buku', [App\Http\Controllers\BooksController::class, 'search'])->name('books.search');
 
 Route::get('/dashboard', function () {

@@ -13,7 +13,7 @@
 @extends('layouts.homepage')
 
 @section('title')
-    Homepage
+    {{ $Category->name }}
 @endsection
 
 @section('content')
@@ -23,27 +23,29 @@
                 <div class="row">
                     <div class="col-lg-8 col-md-8 col-sm-8">
                         <div class="section-title">
-                            <h4>Baru Ditambahkan</h4>
+                            <h4>{{ $Category->name }}</h4>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    @foreach ($Books as $Book)
+                    @foreach ($Category->bookCategory as $bookCategory)
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="product__item">
-                                <a href="{{ route('books.detail', $Book) }}">
+                                <a href="{{ route('books.detail', $bookCategory->book) }}">
                                     <div class="product__item__pic set-bg"
-                                        data-setbg="{{ asset('storage/' . $Book->book_photo_path . $Book->book_photo) }}"
-                                        style="background-image: url('{{ asset('storage/' . $Book->book_photo_path . $Book->book_photo) }}');">
+                                        data-setbg="{{ asset('storage/' . $bookCategory->book->book_photo_path . $bookCategory->book->book_photo) }}"
+                                        style="background-image: url('{{ asset('storage/' . $bookCategory->book->book_photo_path . $bookCategory->book->book_photo) }}');">
                                     </div>
                                 </a>
                                 <div class="product__item__text">
                                     <ul>
-                                        @foreach ($Book->bookCategories as $bookCategory)
-                                            <li>{{ $bookCategory->category->name }}</li>
+                                        @foreach ($bookCategory->book->bookCategories as $bookCategori)
+                                            <li>{{ $bookCategori->category->name }}</li>
                                         @endforeach
                                     </ul>
-                                    <h5><a href="{{ route('books.detail', $Book) }}">{{ $Book->name }}</a></h5>
+                                    <h5><a
+                                            href="{{ route('books.detail', $bookCategory->book) }}">{{ $bookCategory->book->name }}</a>
+                                    </h5>
                                 </div>
                             </div>
                         </div>

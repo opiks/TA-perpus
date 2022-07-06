@@ -1,4 +1,4 @@
-<!-- 
+<!--
 =============================================
    Nama : Muhamad Taufik Zamaludin
    NIM : 1120031026
@@ -6,8 +6,8 @@
    Nama : Muhamad Zulfiqor
    NIM : 1120031025
 
-   Deskripsi Program : App Perpustakaan 
-============================================= 
+   Deskripsi Program : App Perpustakaan
+=============================================
 -->
 
 <!DOCTYPE html>
@@ -35,6 +35,8 @@
     <link rel="stylesheet" href="{{ asset('assets/mainpage/css/owl.carousel.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/mainpage/css/slicknav.min.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('assets/mainpage/css/style.css') }}" type="text/css">
+
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -114,7 +116,7 @@
     <script src="{{ asset('assets/mainpage/js/owl.carousel.min.js') }}"></script>
     <script src="{{ asset('assets/mainpage/js/main.js') }}"></script>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 </body>
 
 </html>
