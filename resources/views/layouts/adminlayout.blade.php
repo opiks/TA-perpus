@@ -74,8 +74,13 @@
                         <div class="menu-text">Admin</div>
                     </a>
                     <div class="dropdown-menu dropdown-menu-end me-lg-3">
-                        <a class="dropdown-item d-flex align-items-center" href="#">Log Out <i
-                                class="fa fa-toggle-off fa-fw ms-auto text-gray-400 fs-16px"></i></a>
+                        <a class="dropdown-item d-flex align-items-center" href="{{ route('logout') }}"
+                            onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+                            Log Out <i class="fa fa-toggle-off fa-fw ms-auto text-gray-400 fs-16px"></i>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
                     </div>
                 </div>
             </div>
