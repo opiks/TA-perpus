@@ -3,9 +3,6 @@
    Nama : Muhamad Taufik Zamaludin
    NIM : 1120031026
 
-   Nama : Muhamad Zulfiqor
-   NIM : 1120031025
-
    Deskripsi Program : App Perpustakaan
 =============================================
 -->

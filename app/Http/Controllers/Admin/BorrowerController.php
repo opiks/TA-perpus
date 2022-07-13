@@ -34,13 +34,19 @@ class BorrowerController extends Controller
             'required' => 'Field :attribute tidak boleh kosong',
         ]);
 
-        $Borrower = new Borrower();
-        $Borrower->member_id = $request->member_id;
-        $Borrower->book_id = $request->book_id;
-        $Borrower->status_borrower = 'Masih Dipinjam';
-        $Borrower->save();
-
         $Book = Book::where('id', $request->book_id)->first();
+        if ($Book->book_total_sisa >= 1) {
+            $Borrower = new Borrower();
+            $Borrower->member_id = $request->member_id;
+            $Borrower->book_id = $request->book_id;
+            $Borrower->status_borrower = 'Masih Dipinjam';
+            $Borrower->save();
+        } else {
+            return redirect()->route('admin.peminjaman.add')->with([
+                'alert' => 'warning',
+                'msg' => 'Data sisa buku sudah habis'
+            ]);
+        }
 
         $bookUpdate = [
             'book_total_sisa' => $Book->book_total_sisa - 1
